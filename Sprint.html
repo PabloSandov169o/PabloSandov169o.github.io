@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sublimaciones AzulPrint</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f3f8ff;
+            color:#003366;
+        }
+
+        header{
+            display:flex;
+            align-items:center;
+            padding:20px;
+            border-bottom:3px solid #b4d2f7;
+        }
+
+        .titulo{
+            font-size:36px;
+            font-weight:bold;
+            flex:1;
+            text-align:center;
+            margin-right:100px;
+        }
+
+        /* --- Primera sección --- */
+
+        .container{
+            display:flex;
+            width:100%;
+            padding:30px;
+            align-items:center; /* NUEVO */
+            box-sizing:border-box;
+        }
+
+        .imagen{
+            width:40%;
+            border-right:2px solid #b4d2f7;
+            padding-right:20px;
+        }
+
+        /* SLIDER */
+        .slider{
+            position: relative;
+            width: 650px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slide{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity:0;
+            transition: opacity 1s;
+            border-radius:8px;
+        }
+
+        .slide.active{
+            opacity:1;
+        }
+
+        .texto{
+            width:60%;
+            padding-left:20px;
+            display:flex;              /* NUEVO */
+            flex-direction:column;     /* NUEVO */
+            justify-content:center;    /* NUEVO */
+        }
+
+        h2{
+            margin-top:0;
+            color:#0f66d8;
+        }
+
+        /* --- NUEVA SECCIÓN DE PRODUCTOS --- */
+
+        .productos{
+            width:100%;
+            padding:50px 20px;
+            box-sizing:border-box;
+            border-top:3px solid #b4d2f7;
+            text-align:center;
+        }
+
+        .productos-grid{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:50px;
+            margin-top:40px;
+        }
+
+        .producto{
+            width:220px;
+            cursor:pointer;
+        }
+
+        .producto img{
+            width:220px;
+            height:220px;
+            background:#ffffff;
+            border:2px solid #b4d2f7;
+            border-radius:8px;
+            object-fit:cover;
+        }
+
+        /* CONTACTO */
+        .contacto{
+            width:90%;
+            margin:50px auto;
+            background:#e2edff;
+            padding:30px;
+            border-radius:10px;
+            border:3px solid #b4d2f7;
+            text-align:center;
+        }
+
+        .btn{
+            padding:10px 20px;
+            background:#0f66d8;
+            color:white;
+            border:0;
+            border-radius:6px;
+            cursor:pointer;
+        }
+
+        /* FOOTER */
+        footer{
+            background:#2d2d2d;
+            color:white;
+            padding:40px;
+            text-align:center;
+            margin-top:50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div><img src="Imagenes/Logotipo.png" width="200" height="200"></div>
+        <div class="titulo">Sublimacion personalizada</div>
+    </header>
+
+    <div class="container">
+
+        <!-- SLIDER AQUÍ -->
+        <div class="imagen slider">
+
+            <img src="Imagenes/Rotativa 1.jpg" class="slide active">
+            <img src="Imagenes/Rotativa 2.jpg" class="slide">
+            <img src="Imagenes/Rotativa 3.jpg" class="slide">
+            <img src="Imagenes/Rotativa 4.jpg" class="slide">
+
+        </div>
+
+        <div class="texto">
+            <h2>Tu idea, nuestro diseño</h2>
+            <p>Somos un emprendimiento especializado en la sublimación personalizada de tazas, camisetas, bolsas, botellas Y MÁS... Perfecto para accesorios, regalos Y MÁS.</p>
+            <p>Trabajamos con tecnología moderna de alta calidad para que tus productos queden perfectos y con los detalles que quieras.</p>
+            <p>¡Haz tu pedido y crea algo único!</p>
+        </div>
+
+    </div>
+
+
+    <!-- NUEVA SECCION PRODUCTOS -->
+
+    <section class="productos">
+
+        <h2>Nuestros Productos</h2>
+
+        <div class="productos-grid">
+
+            <div class="producto" onclick="location.href='producto-tazas.html'">
+                <img src="Imagenes/Taza.jpg">
+                <p>Tazas</p>
+            </div>
+
+            <div class="producto" onclick="location.href='producto-camiseta.html'">
+                <img src="Imagenes/Camiseta.jpg">
+                <p>Camiseta</p>
+            </div>
+
+            <div class="producto" onclick="location.href='producto-bolsa.html'">
+                <img src="Imagenes/Bolsa.jpg">
+                <p>Bolsas</p>
+            </div>
+
+            <div class="producto" onclick="location.href='producto-botella.html'">
+                <img src="Imagenes/Botella.jpg">
+                <p>Botellas</p>
+            </div>
+
+            <div class="producto" onclick="location.href='producto-almohada.html'">
+                <img src="Imagenes/Almohada.jpg">
+                <p>Almohadas</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO RAPIDO -->
+    <div class="contacto">
+
+        <h2>Contacto rápido</h2>
+
+        <p>Escríbenos a nuestro WhatsApp 👇</p>
+        <p id="whatsapp"></p>
+
+        <br>
+
+        <button class="btn" onclick="location.href='#'">Mesa de Trabajo</button>
+
+    </div>
+
+
+
+<footer>
+    <p>📍 Ubicación: Calle Falsa 123, Madrid</p>
+    <p>🌐 www.azulprint.com</p>
+    <p>📧 contacto@azulprint.com</p>
+</footer>
+
+
+
+<!-- JS DEL SLIDER -->
+<script>
+let index = 0;
+const slides = document.querySelectorAll('.slide');
+
+function cambiarImagen(){
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}
+
+setInterval(cambiarImagen, 3000);
+
+
+// genera número whatsapp random
+document.getElementById("whatsapp").innerText = 
+    "+34 6" + Math.floor(1000000 + Math.random()*9000000);
+
+</script>
+
+</body>
+</html>
+
+
+
