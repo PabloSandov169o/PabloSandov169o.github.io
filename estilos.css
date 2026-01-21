@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f8ff;
+    color: #003366;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 3px solid #b4d2f7;
+}
+
+.titulo {
+    font-size: 36px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    margin-right: 100px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.imagen {
+    width: 40%;
+    border-right: 2px solid #b4d2f7;
+    padding-right: 20px;
+}
+
+/* SLIDER */
+.slider {
+    position: relative;
+    width: 650px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+    border-radius: 8px;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* TEXTO */
+.texto {
+    width: 60%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 0;
+    color: #0f66d8;
+}
+
+/* PRODUCTOS */
+.productos {
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    border-top: 3px solid #b4d2f7;
+    text-align: center;
+}
+
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.producto {
+    width: 220px;
+    cursor: pointer;
+}
+
+.producto img {
+    width: 220px;
+    height: 220px;
+    background: #ffffff;
+    border: 2px solid #b4d2f7;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* CONTACTO */
+.contacto {
+    width: 90%;
+    margin: 50px auto;
+    background: #e2edff;
+    padding: 30px;
+    border-radius: 10px;
+    border: 3px solid #b4d2f7;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #0f66d8;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #2d2d2d;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
