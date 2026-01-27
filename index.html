@@ -11,7 +11,7 @@
 
 <header>
     <div>
-        <img src="Imagenes/Logotipo.png" width="200" height="200">
+        <img src="Imagenes/Logo Oscuro.png" width="200" height="200">
     </div>
     <div class="titulo">Sublimacion personalizada</div>
 </header>
@@ -95,23 +95,7 @@
     <p>📧 contacto@azulprint.com</p>
 </footer>
 
-<!-- JAVASCRIPT -->
-<script>
-let index = 0;
-const slides = document.querySelectorAll('.slide');
-
-function cambiarImagen() {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-}
-
-setInterval(cambiarImagen, 3000);
-
-// Número WhatsApp aleatorio
-document.getElementById("whatsapp").innerText =
-    "+34 6" + Math.floor(1000000 + Math.random() * 9000000);
-</script>
+<script src="scripts.js"></script>
 
 </body>
 </html>
