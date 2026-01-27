@@ -11,4 +11,4 @@ setInterval(cambiarImagen, 3000);
 
 // Número WhatsApp aleatorio
 document.getElementById("whatsapp").innerText =
-    "+34 6" + Math.floor(1000000 + Math.random() * 9000000);
+    "+34 692 19 94 07";
