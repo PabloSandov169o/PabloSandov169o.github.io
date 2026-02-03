@@ -29,6 +29,7 @@ header {
     padding: 30px;
     align-items: center;
     box-sizing: border-box;
+    justify-content: space-between;
 }
 
 .imagen {
@@ -43,6 +44,11 @@ header {
     width: 650px;
     height: 400px;
     overflow: hidden;
+}
+
+.imagen.slider {
+    width: 30%;
+    border-right: none;
 }
 
 .slide {
@@ -61,11 +67,20 @@ header {
 
 /* TEXTO */
 .texto {
-    width: 60%;
+    width: 40%;
     padding-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+}
+
+.lado-izquierdo {
+    padding-right: 10px;
+}
+
+.lado-derecho {
+    padding-left: 10px;
 }
 
 h2 {
