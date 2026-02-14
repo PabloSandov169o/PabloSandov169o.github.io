@@ -208,6 +208,40 @@ footer {
     margin-left: 15px;
 }
 
+/* REDES SOCIALES FOOTER */
+
+.redes-sociales {
+    margin-top: 20px;
+}
+
+.btn-red {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Instagram */
+.instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+/* TikTok */
+.tiktok {
+    background: #000000;
+}
+
+/* Hover efecto */
+.btn-red:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
 @font-face {
     font-family: 'MiFuentePersonalizada1';
     src: url('Fuentes/CHICKEN\ Pie.ttf') format('truetype');
