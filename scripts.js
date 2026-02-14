@@ -22,3 +22,24 @@ setInterval(cambiarImagen, 7000);
 document.getElementById("whatsapp").innerText =
     "+34 692 19 94 07";
 
+
+    // SLIDER NOVEDADES (manual con bucle)
+let indexNovedad = 0;
+const novedades = document.querySelectorAll('.novedad');
+
+function cambiarNovedad(direccion) {
+
+    novedades[indexNovedad].classList.remove('active');
+
+    indexNovedad += direccion;
+
+    if (indexNovedad >= novedades.length) {
+        indexNovedad = 0;
+    }
+
+    if (indexNovedad < 0) {
+        indexNovedad = novedades.length - 1;
+    }
+
+    novedades[indexNovedad].classList.add('active');
+}

@@ -20,6 +20,8 @@ header {
     flex: 1;
     text-align: center;
     margin-right: 100px;
+    font-family: 'MiFuentePersonalizada2', sans-serif;
+    font-size: 62px;
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -86,6 +88,8 @@ header {
 h2 {
     margin-top: 0;
     color: #0f66d8;
+    font-family: 'MiFuentePersonalizada1', sans-serif;
+    font-size: 42px;
 }
 
 /* PRODUCTOS */
@@ -138,4 +142,82 @@ footer {
     padding: 40px;
     text-align: center;
     margin-top: 50px;
+}
+
+/* NOVEDADES */
+.novedades {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 3px solid #b4d2f7;
+}
+
+.novedades-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.novedades-contenedor {
+    width: 90%;
+    max-width: 1100px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.novedad {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.novedad.active {
+    display: block;
+}
+
+/* FLECHAS */
+.flecha {
+    background: white;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.flecha:hover {
+    transform: scale(1.1);
+}
+
+.izquierda {
+    margin-right: 15px;
+}
+
+.derecha {
+    margin-left: 15px;
+}
+
+@font-face {
+    font-family: 'MiFuentePersonalizada1';
+    src: url('Fuentes/CHICKEN\ Pie.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MiFuentePersonalizada2';
+    src: url('Fuentes/Happy\ Night.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
