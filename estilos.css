@@ -28,6 +28,20 @@ header img {
     margin: 10px 0;
 }
 
+.titulo-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    text-align: center;
+}
+
+.titulo-principal h1 {
+    flex: 1;
+    font-size: 2rem;
+    margin: 0;
+}
+
 /* CONTENEDOR PRINCIPAL */
 .container {
     display: flex;
@@ -82,19 +96,19 @@ header img {
     text-align: center;
 }
 
-.lado-izquierdo {
-    padding-right: 10px;
+.logo-izq,
+.logo-der {
+    width: 70px;
+    height: auto;
 }
 
-.lado-derecho {
-    padding-left: 10px;
-}
-
-.lado-izquierdo,
-.lado-derecho {
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: center;
+/* LINEA SEPARADORA */
+.linea-separadora {
+    width: 90%;
+    height: 4px;
+    margin: 20px auto;
+    background: linear-gradient(to right, transparent, #2b6cb0, transparent);
+    border-radius: 50px;
 }
 
 .texto {
