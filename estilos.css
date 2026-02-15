@@ -43,7 +43,8 @@ header {
 /* SLIDER */
 .slider {
     position: relative;
-    width: 650px;
+    width: 100%;
+    max-width: 650px;
     height: 400px;
     overflow: hidden;
 }
@@ -254,4 +255,133 @@ footer {
     src: url('Fuentes/Happy\ Night.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+/* ========================= */
+/* RESPONSIVE GENERAL */
+/* ========================= */
+
+@media (max-width: 1200px) {
+
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .imagen.slider {
+        width: 80%;
+    }
+
+    .texto {
+        width: 90%;
+        padding: 0;
+    }
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 992px) {
+
+    .slider {
+        height: 320px;
+    }
+
+    .novedades-contenedor {
+        height: 350px;
+    }
+
+    .productos-grid {
+        gap: 30px;
+    }
+}
+
+/* ========================= */
+/* MÓVIL */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    header img {
+        width: 120px;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 34px;
+        margin: 10px 0;
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    /* SOLO UN SLIDER EN MÓVIL */
+    .lado-derecho {
+        display: none;
+    }
+
+    .imagen.slider {
+        width: 100%;
+    }
+
+    .slider {
+        height: 250px;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    /* NOVEDADES */
+    .novedades-contenedor {
+        height: 250px;
+    }
+
+    .flecha {
+        font-size: 24px;
+        padding: 10px 14px;
+    }
+
+    /* PRODUCTOS */
+    .productos-grid {
+        gap: 20px;
+    }
+
+    .producto {
+        width: 45%;
+    }
+
+    .producto img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* CONTACTO */
+    .contacto {
+        width: 95%;
+        padding: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 25px;
+        font-size: 14px;
+    }
+
 }
