@@ -9,29 +9,33 @@ body {
 header {
     display: flex;
     align-items: center;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 20px 40px;
     border-bottom: 3px solid #b4d2f7;
+    flex-wrap: wrap;
 }
 
+header img {
+    width: 150px;
+    height: auto;
+}
 
 .titulo {
-    font-size: 36px;
-    font-weight: bold;
     flex: 1;
     text-align: center;
-    margin-right: 100px;
     font-family: 'MiFuentePersonalizada2', sans-serif;
-    font-size: 62px;
+    font-size: clamp(28px, 5vw, 62px);
+    margin: 10px 0;
 }
 
 /* CONTENEDOR PRINCIPAL */
 .container {
     display: flex;
-    width: 100%;
-    padding: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
     align-items: center;
-    box-sizing: border-box;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .imagen {
@@ -43,8 +47,9 @@ header {
 /* SLIDER */
 .slider {
     position: relative;
-    width: 650px;
-    height: 400px;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 4/3;
     overflow: hidden;
 }
 
@@ -85,6 +90,18 @@ header {
     padding-left: 10px;
 }
 
+.lado-izquierdo,
+.lado-derecho {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.texto {
+    flex: 1 1 350px;
+    max-width: 500px;
+}
+
 h2 {
     margin-top: 0;
     color: #0f66d8;
@@ -102,25 +119,23 @@ h2 {
 }
 
 .productos-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
     margin-top: 40px;
 }
 
 .producto {
-    width: 220px;
+    width: 100%;
     cursor: pointer;
 }
 
 .producto img {
-    width: 220px;
-    height: 220px;
-    background: #ffffff;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     border: 2px solid #b4d2f7;
     border-radius: 8px;
-    object-fit: cover;
 }
 
 /* CONTACTO */
@@ -254,4 +269,59 @@ footer {
     src: url('Fuentes/Happy\ Night.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* SOLO UN SLIDER EN MÓVIL */
+    .lado-derecho {
+        display: none;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    /* NOVEDADES */
+    .novedades-contenedor {
+        height: 250px;
+    }
+
+    .flecha {
+        font-size: 24px;
+        padding: 10px 14px;
+    }
+
+    /* CONTACTO */
+    .contacto {
+        width: 95%;
+        padding: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 25px;
+        font-size: 14px;
+    }
+
 }
