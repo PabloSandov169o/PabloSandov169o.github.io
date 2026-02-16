@@ -1,9 +1,48 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseños de Tazas</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
 
-    </head>
-    <body>
-        <h1>Tazas</h1>
-    </body>
+<header class="top-bar">
+    <div class="top-content">
+        <button class="back-btn" onclick="window.location.href='index.html'">←</button>
+        <div class="titulo-area">
+            <h1>Diseños de Tazas</h1>
+            <p>Elige un diseño para empezar a personalizar.</p>
+        </div>
+    </div>
+
+    <div class="filtros">
+        <input type="text" id="searchInput" placeholder="Buscar diseños...">
+        <select id="tagFilter">
+            <option value="all">Todas las etiquetas</option>
+            <option value="futbol">Fútbol</option>
+            <option value="anime">Anime</option>
+            <option value="personalizable">Personalizable</option>
+        </select>
+    </div>
+</header>
+
+<main class="grid-container">
+
+    <div class="card" data-name="Taza Barca Personalizable" data-tag="futbol personalizable">
+        <img src="Diseños/Tazas/PROYECTO_TAZA_Anita.jpg" alt="Taza Barca">
+        <div class="card-info">
+            <h3>Taza Tia + Dibujo sobrino</h3>
+            <div class="tags">
+                <span>Fútbol</span>
+                <span>Personalizable</span>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script src="scripts2.js"></script>
+</body>
 </html>
