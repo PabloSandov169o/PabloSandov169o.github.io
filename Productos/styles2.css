@@ -116,3 +116,83 @@ body {
     font-size: 12px;
     margin-right: 5px;
 }
+
+.trabajo-card {
+    display: flex;
+    gap: 30px;
+    background-color: #e8f2ff;
+    border: 1px solid #c6dbff;
+    border-radius: 18px;
+    padding: 25px;
+    margin: 30px auto;
+    align-items: center;
+    transition: 0.3s ease;
+
+    width: 80%;         /* 👈 Ahora ocupa 80% */
+    max-width: 1200px;  /* Puedes subir esto si quieres que sea más grande */
+}
+
+.trabajo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.trabajo-img {
+    flex: 0 0 40%;
+}
+
+.trabajo-img img {
+    width: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.trabajo-info {
+    flex: 1;
+}
+
+.trabajo-info h2 {
+    color: #1a4fbf; /* Azul principal como tu página */
+    margin-bottom: 10px;
+}
+
+.trabajo-info p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.etiquetas {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.etiquetas span {
+    background-color: #d6e7ff;
+    color: #1a4fbf;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    .trabajo-card {
+        width: 95%;
+        flex-direction: column; /* Imagen arriba, texto abajo */
+        text-align: center;
+    }
+
+    .trabajo-img {
+        flex: none;
+        width: 100%;
+    }
+
+    .trabajo-info {
+        width: 100%;
+    }
+
+    .etiquetas {
+        justify-content: center;
+    }
+}
