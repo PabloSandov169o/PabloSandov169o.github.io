@@ -19,17 +19,17 @@
 
     <div class="filtros">
         <input type="text" id="searchInput" placeholder="Buscar diseños...">
-        <select id="tagFilter">
-            <option value="all">Todas las etiquetas</option>
-            <option value="futbol">Fútbol</option>
-            <option value="anime">Anime</option>
-            <option value="personalizable">Personalizable</option>
-        </select>
     </div>
 </header>
 
-<div class="trabajo-card">
-    
+<div class="filtros">
+    <button onclick="filtrar('todos')" class="activo">Todos</button>
+    <button onclick="filtrar('futbol')">Fútbol</button>
+    <button onclick="filtrar('anime')">Anime</button>
+    <button onclick="filtrar('personalizable')">Personalizable</button>
+</div>
+
+<div class="trabajo-card" data-tags="anime personalizado regalo">
     <div class="trabajo-img">
         <img src="Diseños/Tazas/PROYECTO_TAZA_Anita.jpg" alt="Trabajo">
     </div>
@@ -44,7 +44,6 @@
             <span>Personalizable</span>
         </div>
     </div>
-
 </div>
 
 <script src="scripts2.js"></script>

@@ -40,3 +40,24 @@ window.addEventListener("scroll", () => {
 
     lastScroll = currentScroll;
 });
+
+function filtrar(tag) {
+    const tarjetas = document.querySelectorAll('.trabajo-card');
+    const botones = document.querySelectorAll('.filtros button');
+
+    // Quitar clase activa
+    botones.forEach(btn => btn.classList.remove('activo'));
+
+    // Añadir clase activa al botón pulsado
+    event.target.classList.add('activo');
+
+    tarjetas.forEach(card => {
+        const tags = card.getAttribute('data-tags');
+
+        if (tag === 'todos' || tags.includes(tag)) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}

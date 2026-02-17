@@ -196,3 +196,29 @@ body {
         justify-content: center;
     }
 }
+
+.filtros {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.filtros button {
+    background-color: #d6e7ff;
+    color: #1a4fbf;
+    border: none;
+    padding: 8px 18px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtros button:hover {
+    background-color: #1a4fbf;
+    color: white;
+}
+
+.filtros button.activo {
+    background-color: #1a4fbf;
+    color: white;
+}
