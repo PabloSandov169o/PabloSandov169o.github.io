@@ -1,18 +1,19 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #0b1c2d;
-    color: white;
+    background-color: #ffffff;
+    color: #0b3d91; /* azul estilo tu página */
 }
 
 /* HEADER */
 .top-bar {
     position: sticky;
     top: 0;
-    background-color: #0b1c2d;
+    background-color: #ffffff;
     padding: 20px 5%;
     transition: transform 0.3s ease;
     z-index: 1000;
+    border-bottom: 2px solid #d6e4f7; /* línea separadora */
 }
 
 .top-bar.hide {
@@ -29,14 +30,14 @@ body {
     background: none;
     border: none;
     font-size: 28px;
-    color: white;
+    color: #0b3d91;
     cursor: pointer;
 }
 
 .titulo-area h1 {
     margin: 0;
     font-size: clamp(24px, 4vw, 48px);
-    color: #4da3ff;
+    color: #0b3d91;
 }
 
 .titulo-area p {
@@ -47,18 +48,29 @@ body {
 /* FILTROS */
 .filtros {
     display: flex;
-    gap: 15px;
+    gap: 0;
     margin-top: 20px;
-    flex-wrap: wrap;
 }
 
-#searchInput,
+#searchInput {
+    width: 80%;
+    padding: 14px;
+    border: 2px solid #d6e4f7;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    background-color: #f4f6fa;
+    color: #0b3d91;
+    font-size: 15px;
+}
+
 #tagFilter {
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    font-size: 14px;
-    flex: 1;
+    width: 20%;
+    padding: 14px;
+    border: 2px solid #d6e4f7;
+    border-radius: 0 10px 10px 0;
+    background-color: #f4f6fa;
+    color: #0b3d91;
+    font-size: 15px;
 }
 
 /* GRID */
@@ -70,7 +82,8 @@ body {
 
 /* CARD */
 .card {
-    background-color: #122a42;
+    background-color: #38b0ec;
+    border: 2px solid #d6e4f7;
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.2s ease;
@@ -96,7 +109,8 @@ body {
 }
 
 .tags span {
-    background-color: #1e3c5c;
+    background-color: #e7effa;
+    color: #0b3d91;
     padding: 6px 10px;
     border-radius: 20px;
     font-size: 12px;
