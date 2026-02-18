@@ -1,7 +1,7 @@
 // ELEMENTOS
 const searchInput = document.getElementById("searchInput");
 const tarjetas = document.querySelectorAll(".trabajo-card");
-const botones = document.querySelectorAll(".filtros button");
+const botones = document.querySelectorAll(".botones-filtro button");
 
 let filtroActivo = "todos";
 

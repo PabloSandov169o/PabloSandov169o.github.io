@@ -175,33 +175,6 @@ body {
     font-size: 14px;
 }
 
-@media (max-width: 768px) {
-
-    .trabajo-card {
-        width: 95%;
-        flex-direction: column; /* Imagen arriba, texto abajo */
-        text-align: center;
-    }
-
-    .trabajo-img {
-        flex: none;
-        width: 100%;
-    }
-
-    .trabajo-info {
-        width: 100%;
-    }
-
-    .etiquetas {
-        justify-content: center;
-    }
-}
-
-.filtros {
-    text-align: center;
-    margin: 40px 0;
-}
-
 .filtros button {
     background-color: #d6e7ff;
     color: #1a4fbf;
@@ -219,6 +192,49 @@ body {
 }
 
 .filtros button.activo {
+    background-color: #1a4fbf;
+    color: white;
+}
+
+.filtros-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #d6e4f7;
+    border-radius: 10px;
+    background-color: #f4f6fa;
+    color: #0b3d91;
+    font-size: 15px;
+}
+
+.botones-filtro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.botones-filtro button {
+    background-color: #d6e7ff;
+    color: #1a4fbf;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botones-filtro button:hover {
+    background-color: #1a4fbf;
+    color: white;
+}
+
+.botones-filtro button.activo {
     background-color: #1a4fbf;
     color: white;
 }
