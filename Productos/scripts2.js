@@ -1,29 +1,44 @@
-// BUSCADOR + FILTRO
+// ELEMENTOS
 const searchInput = document.getElementById("searchInput");
-const tagFilter = document.getElementById("tagFilter");
-const cards = document.querySelectorAll(".card");
+const tarjetas = document.querySelectorAll(".trabajo-card");
+const botones = document.querySelectorAll(".filtros button");
 
-function filterCards() {
-    const searchValue = searchInput.value.toLowerCase();
-    const selectedTag = tagFilter.value;
+let filtroActivo = "todos";
 
-    cards.forEach(card => {
-        const name = card.dataset.name.toLowerCase();
-        const tags = card.dataset.tag;
+// FUNCION PRINCIPAL DE FILTRADO
+function aplicarFiltros() {
+    const textoBusqueda = searchInput.value.toLowerCase();
 
-        const matchName = name.includes(searchValue);
-        const matchTag = selectedTag === "all" || tags.includes(selectedTag);
+    tarjetas.forEach(card => {
+        const titulo = card.querySelector("h2").textContent.toLowerCase();
+        const tags = card.getAttribute("data-tags");
 
-        if (matchName && matchTag) {
-            card.style.display = "block";
+        const coincideBusqueda = titulo.includes(textoBusqueda);
+        const coincideTag = filtroActivo === "todos" || tags.includes(filtroActivo);
+
+        if (coincideBusqueda && coincideTag) {
+            card.style.display = "flex";
         } else {
             card.style.display = "none";
         }
     });
 }
 
-searchInput.addEventListener("input", filterCards);
-tagFilter.addEventListener("change", filterCards);
+// BUSCADOR
+searchInput.addEventListener("input", aplicarFiltros);
+
+// BOTONES DE FILTRO
+botones.forEach(boton => {
+    boton.addEventListener("click", function () {
+        botones.forEach(btn => btn.classList.remove("activo"));
+        this.classList.add("activo");
+
+        filtroActivo = this.textContent.toLowerCase();
+        if (filtroActivo === "todos") filtroActivo = "todos";
+
+        aplicarFiltros();
+    });
+});
 
 // HEADER ANIMADO AL SCROLL
 let lastScroll = 0;
@@ -40,24 +55,3 @@ window.addEventListener("scroll", () => {
 
     lastScroll = currentScroll;
 });
-
-function filtrar(tag) {
-    const tarjetas = document.querySelectorAll('.trabajo-card');
-    const botones = document.querySelectorAll('.filtros button');
-
-    // Quitar clase activa
-    botones.forEach(btn => btn.classList.remove('activo'));
-
-    // Añadir clase activa al botón pulsado
-    event.target.classList.add('activo');
-
-    tarjetas.forEach(card => {
-        const tags = card.getAttribute('data-tags');
-
-        if (tag === 'todos' || tags.includes(tag)) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
