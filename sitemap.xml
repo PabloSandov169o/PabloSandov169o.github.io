@@ -43,5 +43,19 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://pablosandov1690.github.io/Productos/Jarras.html</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pablosandov1690.github.io/Productos/Lanyards.html</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
 
