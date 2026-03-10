@@ -269,6 +269,10 @@ footer {
     background: #000000;
 }
 
+.x {
+    background: #000000;
+}
+
 /* Hover efecto */
 .btn-red:hover {
     transform: translateY(-3px);
