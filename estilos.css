@@ -273,6 +273,10 @@ footer {
     background: #000000;
 }
 
+.linkedin {
+    background: #4e81ed;
+}
+
 /* Hover efecto */
 .btn-red:hover {
     transform: translateY(-3px);
