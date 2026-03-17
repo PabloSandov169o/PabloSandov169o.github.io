@@ -16,7 +16,7 @@ function cambiarImagen() {
 }
 
 // ⏱️ Cambian cada 7 segundos Y A LA VEZ
-setInterval(cambiarImagen, 7000);
+setInterval(cambiarImagen, 4000);
 
 // Número WhatsApp
 document.getElementById("whatsapp").innerText =
