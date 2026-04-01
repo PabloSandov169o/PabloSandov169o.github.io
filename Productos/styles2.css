@@ -238,3 +238,55 @@ body {
     background-color: #1a4fbf;
     color: white;
 }
+
+/* CARRUSEL */
+
+.trabajo-img {
+    position: relative;
+    flex: 0 0 40%;
+}
+
+.carrusel {
+    position: relative;
+    width: 100%;
+}
+
+.carrusel img {
+    width: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+    display: none;
+}
+
+.carrusel img.activa {
+    display: block;
+}
+
+/* FLECHAS */
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.2s;
+}
+
+.flecha:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.flecha.izquierda {
+    left: 10px;
+}
+
+.flecha.derecha {
+    right: 10px;
+}

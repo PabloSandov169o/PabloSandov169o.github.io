@@ -55,3 +55,50 @@ window.addEventListener("scroll", () => {
 
     lastScroll = currentScroll;
 });
+
+// CARRUSEL DE IMAGENES
+
+const carruseles = document.querySelectorAll(".trabajo-img");
+
+carruseles.forEach(carrusel => {
+
+    const imagenes = carrusel.querySelectorAll(".carrusel img");
+    const btnIzq = carrusel.querySelector(".izquierda");
+    const btnDer = carrusel.querySelector(".derecha");
+
+    let indice = 0;
+
+    function mostrarImagen(i) {
+
+        imagenes.forEach(img => {
+            img.classList.remove("activa");
+        });
+
+        imagenes[i].classList.add("activa");
+    }
+
+    btnDer.addEventListener("click", () => {
+
+        indice++;
+
+        if (indice >= imagenes.length) {
+            indice = 0;
+        }
+
+        mostrarImagen(indice);
+
+    });
+
+    btnIzq.addEventListener("click", () => {
+
+        indice--;
+
+        if (indice < 0) {
+            indice = imagenes.length - 1;
+        }
+
+        mostrarImagen(indice);
+
+    });
+
+});
